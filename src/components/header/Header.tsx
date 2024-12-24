@@ -1,12 +1,16 @@
-import Link from 'next/link';
+import { getTextDate } from '@/util/helpers';
 import { IoChevronDownSharp } from 'react-icons/io5';
+import Link from 'next/link';
+
+const currentDate = new Date();
+const dateText = getTextDate(currentDate);
 
 export default function Header() {
    return (
 	  <header className="flex justify-center bg-gradient-primary bg-cover h-header font-instrument">
 		 <ul className="flex justify-between items-center w-header-wrapper text-white 2xl:font-medium">
 			<li className="hidden 2xl:inline text-header-small 2xl:text-header-big">
-			   <p>December 24, 2024</p>
+			   <p>{dateText}</p>
 			</li>
 			<li className="flex items-center gap-5 h-full text-header-small 2xl:text-header-big">
 			   <p>Get 50% Off on your First pair of Shoes</p>
