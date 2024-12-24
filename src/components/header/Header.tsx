@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { IoChevronDownSharp } from 'react-icons/io5';
 
 export default function Header() {
    return (
@@ -13,7 +14,10 @@ export default function Header() {
 			   <p className="hidden 2xl:inline">Shop Now</p>
 			</li>
 			<li className="flex items-center gap-2 h-full text-header-small 2xl:text-header-big">
-			   <button className="px-2 py-1">English</button>
+			   <button className="flex items-center gap-1 px-2 py-1">
+				  <p>English</p>
+				  <IoChevronDownSharp />
+			   </button>
 			   <div className="block 2xl:hidden h-1/2 bg-white w-[1px]" />
 			   <Link className="px-1 py-1" href="/">Contact Us</Link>
 			</li>
